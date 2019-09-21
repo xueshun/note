@@ -20,4 +20,11 @@
 
 ## 接口中自定义的方法是如何被解释的
 
-1. RepositoryFactorySupport
+1. RepositoryFactorySupport.getRepository() 方法中添加了Advice
+<img alt="Spring Date JPA 的Repository是怎么从接口化成Bean的？-bb7d46fa.png" src="assets/Spring Date JPA 的Repository是怎么从接口化成Bean的？-bb7d46fa.png" width="" height="" >
+
+2. RepositoryFactorySupport.invoke()
+
+3. AbstractJpaQuery.execute()执行具体的查询
+
+4. 语法在Part中
